@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+/*========================================*/
+/*------------ [Google_Font] -----------*/
+/*========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Inter:wght@600;700&display=swap');
+
+/*========================================*/
+/*------------ [_Root] -----------*/
+/*========================================*/
+:root {
+
+    /* Colors */
+    --white-color: #FFFFFF;
+    --black-color: #0f393b;
+    --green-color: #347362;
+    --litegreen-color: #6b8483;
+    --beige-110: #e6e1d6;
+    --beige-60: #f1efe8;
+
+
+    /* FontStyle*/
+    --fontOne: 'Harmattan', sans-serif;
+    --fontTwo: 'Inter', sans-serif;
+    
+
+    /* Font Sizes */
+    --font-twohun: 4.75rem;
+    --font-thirtyTwo: 1.35rem;
+    --font-twentyFour: 1.25rem;
+    --font-eighteen: 1.125rem;
+    --font-sixteen: .8725rem;
+    --font-fourteen: .88rem;
+    --font-twelve: .75rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (min-width:900px) {
+    :root {
+        --font-thirtyTwo: 2rem;
+        --font-twentyFour: 1.5rem;
+        --font-eighteen: 1.25rem;
+        --font-sixteen: 1rem;
+        --font-fourteen: .88rem;
+        --font-twelve: .75rem;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*========================================*/
+/*------------ [_Reset_Styles] -----------*/
+/*========================================*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html {
+    scroll-behavior: smooth;
 }
 
-.App-link {
-  color: #61dafb;
+/* @font-face {
+    font-family: 'augustbold';
+    src: url('../src/assets/august/august-bold-webfont.woff2') format('woff2'),
+         url('../src/assets/august/august-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/*========================================*/
+/*--------------- [_Buttons] -------------*/
+/*========================================*/
+/*Btn Style Max*/
+
+
+/*========================================*/
+/*--------------- [_Utility] -------------*/
+/*========================================*/
+body {
+    max-width: 2560px;
+    height: 100vh;
+    background-color: var(--beige-110);
+    font-family: var(--fontOne);
+    color: var(--black-color);
+    letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p, h1, h2, h3,
+h4, h5, h6{
+    padding: 0;
+    margin: 0;
 }
+
+h2, h3,
+h4, h5, h6 {
+    color: var(--head-pri-color);
+    font-family: var(--fontOne);
+}
+
+p {
+    font-size: var(--font-sixteen);
+    line-height: 1.5rem;
+    color: var(--text-pri-color);
+}
+
+h1 {
+    font-size: var(--font-thirtyTwo);
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: var(--font-twentyFour);
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--font-eighteen);
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: var(--font-sixteen);
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: var(--font-twelve);
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: var(--font-eleven);
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--fontOne);
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*========================================*/
+/*--------------- [Body Wrapper] -------------*/
+.bodyWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2rem;
+}
+
+/*========================================*/
+/*--------------- [_Header] -------------*/
