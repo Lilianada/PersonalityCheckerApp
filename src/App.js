@@ -1,11 +1,14 @@
 import './App.css';
+import BodyContainer from './components/Body/Body';
+import FooterSection from './components/Footer/Footer';
+import HeaderNav from './components/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome</h1>
-      </header>
+    <div className="App bodyWrapper">
+      <HeaderNav />
+      <BodyContainer />
+      <FooterSection />
     </div>
   );
 }

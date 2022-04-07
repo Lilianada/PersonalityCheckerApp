@@ -1,12 +1,12 @@
 import React from 'react';
-import './Footer.css';
+import {Footer} from './FooterStyles.js';
 
-export default function Footer () {
+export default function FooterSection () {
 
     return(
-        <footer className="footerSection">
-            <div className="greeting"><p>Designslilian</p></div>
+        <Footer className="footerSection">
             <div className="copyrightWhite"><p>© 2022 <strong>PersonalityCheck,</strong> inc.</p></div>
-        </footer>
+            <div className="greeting"><p>Designslilian</p></div>
+        </Footer>
     )
 }

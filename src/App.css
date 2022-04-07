@@ -2,7 +2,7 @@
 /*------------ [Google_Font] -----------*/
 /*========================================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Inter:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika&family=Harmattan:wght@400;700&display=swap');
 
 /*========================================*/
 /*------------ [_Root] -----------*/
@@ -14,13 +14,16 @@
     --black-color: #0f393b;
     --green-color: #347362;
     --litegreen-color: #6b8483;
-    --beige-110: #e6e1d6;
+    --darkgreen-color: #2e6757;
+    --beige-110: #eeebe3;
     --beige-60: #f1efe8;
-
+    --beige-10: #f5f3ee;
+    --orange-color: #f1a680;
+    --orange-2: #f5decf;
 
     /* FontStyle*/
     --fontOne: 'Harmattan', sans-serif;
-    --fontTwo: 'Inter', sans-serif;
+    --fontTwo: 'Andika', sans-serif;
     
 
     /* Font Sizes */
@@ -108,6 +111,7 @@ h1 {
     line-height: 2rem;
     font-weight: 500;
     letter-spacing: 1px;
+    font-family: var(--fontTwo);
 }
 
 h2 {
@@ -167,4 +171,9 @@ img {
 }
 
 /*========================================*/
-/*--------------- [_Header] -------------*/
+/*--------------- [Body] -------------*/
+.image{
+    width: 15rem;
+    height: 15rem;
+    margin: 2rem auto;
+}
