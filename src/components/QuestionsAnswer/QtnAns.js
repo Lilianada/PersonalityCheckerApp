@@ -8,7 +8,8 @@ import { Opt,
     Ans, 
     Button,
     ButtonWrap,
-    Result
+    Result,
+    ResultText
 } from './QAstyles.js';
 import questions from "./Questions.js";
 
@@ -19,6 +20,7 @@ export default function QtnAnswer () {
     //Replaces the current question with the next question
     const [currentQtn, setCurrentQtn] = useState(0)
 
+    //Shows the result of the test
     const [showResult, setShowResult] = useState(false)
 
     // Handle the Next button once clicked
@@ -28,7 +30,7 @@ export default function QtnAnswer () {
         }else if (correctAns == "extrovert" > 3){
             setShowResult("Extrovert")
         }else {
-            setShowResult("Ambivert")
+            setShowResult("Ambivert") 
         }
 
         const nxtQuestion = currentQtn + 1;
@@ -43,7 +45,10 @@ export default function QtnAnswer () {
     return (
         <>
             {showResult ? (
-                <Result>You are an {showResult}</Result>
+                <Result>
+                    <ResultText>You are an {showResult}!</ResultText>
+                    {/* <img src="https://n.foxdsgn.com/sterling-3/wp-content/uploads/2020/12/7-2.png" alt="Result" /> */}
+                </Result>
                 )
                 :
                 (

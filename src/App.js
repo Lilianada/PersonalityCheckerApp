@@ -1,14 +1,15 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import BodyContainer from './components/Body/Body';
-import FooterSection from './components/Footer/Footer';
-import HeaderNav from './components/Header/Header';
+import QtnAnswer from './components/QuestionsAnswer/QtnAns';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
     <div className="App bodyWrapper">
-      <HeaderNav />
-      <BodyContainer />
-      <FooterSection />
+      <Home/>
+      {/* <Routes>
+          <Route path="/Home" element={<Home/>}/>
+      </Routes> */}
     </div>
   );
 }

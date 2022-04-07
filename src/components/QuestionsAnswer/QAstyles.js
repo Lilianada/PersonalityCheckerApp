@@ -3,8 +3,17 @@ import styled from 'styled-components';
 export const Wrapper = styled.section`
     
 `
+
 export const Result = styled.div`
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+
+export const ResultText = styled.h1`
+    text-align: center;
+    font-size: var(--font-twentyfour);
+    font-weight: 600;
 `
 export const QtnCount = styled.p`
     font-size: var(--font-eighteen);
