@@ -24,16 +24,15 @@ export default function QtnAnswer () {
     //Shows the result of the test
     const [showResult, setShowResult] = useState(false)
 
-    // Handle the Next button once clicked
-    const handleClick = (correctAns) => {
-        if ((correctAns == "introvert") > 3) {
-            setShowResult("Introvert")
-        }else if ((correctAns == "extrovert") > 3){
-            setShowResult("Extrovert")
-        }else {
-            setShowResult("Ambivert") 
+    // Hanlde Options
+    const handleOptions = (correctAns) => {
+        if ((correctAns === "introvert") > 3) {
+            console.log("Introvert")
         }
+    }
 
+    // Handle the Next button once clicked
+    const handleClick = () => {
         const nxtQuestion = currentQtn + 1;
             setCurrentQtn(nxtQuestion);
         if (nxtQuestion < questions.length){
@@ -61,7 +60,7 @@ export default function QtnAnswer () {
                             <Req>All questions are required</Req>
 
                             {questions[currentQtn].Options.map((options, idx) => (
-                                <Options key={idx}>
+                                <Options key={idx} onSubmit={()=> handleOptions(options.correctAns)}>
                                     <Opt>{options.opt}</Opt>
                                     <Ans>{options.ans}</Ans>
                                 </Options>

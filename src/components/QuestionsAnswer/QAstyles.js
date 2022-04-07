@@ -29,15 +29,22 @@ export const Qtn = styled.h2`
 export const Req = styled.p`
     font-weight: 500;
     font-style: italic;
+    font-size: var(--font--fourteen);
+    color: var(--green-color);
 `
 
-export const Options = styled.div`
+export const Options = styled.form`
+    width: 100%;
     padding: 1rem;
     background: var(--beige-10);
     display: flex;
     align-items: center;
     margin-top: 1.5rem;
     box-shadow: 0 4px 25px rgb(0 0 0 / 5%);
+    border: none;
+    outline: none;
+    font-family: var(--fontOne);
+    font-size: var(--font--eighteen);
     cursor: pointer;
 
     &:hover, :focus{
@@ -46,7 +53,7 @@ export const Options = styled.div`
 `
 
 export const Opt = styled.div`
-    padding: 0rem .5rem;
+    padding: .5rem .75rem;
     border-radius: 3px;
     font-weight: 600;
     background: var(--orange-color);

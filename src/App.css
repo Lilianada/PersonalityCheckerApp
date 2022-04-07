@@ -27,7 +27,6 @@
     
 
     /* Font Sizes */
-    --font-twohun: 4.75rem;
     --font-thirtyTwo: 1.35rem;
     --font-twentyFour: 1.25rem;
     --font-eighteen: 1.125rem;
@@ -39,7 +38,7 @@
 @media screen and (min-width:900px) {
     :root {
         --font-thirtyTwo: 2rem;
-        --font-twentyFour: 1.5rem;
+        --font-twentyFour: 1.75rem;
         --font-eighteen: 1.25rem;
         --font-sixteen: 1rem;
         --font-fourteen: .88rem;
@@ -61,19 +60,6 @@
 html {
     scroll-behavior: smooth;
 }
-
-/* @font-face {
-    font-family: 'augustbold';
-    src: url('../src/assets/august/august-bold-webfont.woff2') format('woff2'),
-         url('../src/assets/august/august-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
-
-/*========================================*/
-/*--------------- [_Buttons] -------------*/
-/*========================================*/
-/*Btn Style Max*/
 
 
 /*========================================*/
