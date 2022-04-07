@@ -12,7 +12,7 @@ export const Result = styled.div`
 
 export const ResultText = styled.h1`
     text-align: center;
-    font-size: var(--font-twentyfour);
+    /* font-size: var(--font-twentyfour); */
     font-weight: 600;
 `
 export const QtnCount = styled.p`
@@ -33,7 +33,7 @@ export const Req = styled.p`
 
 export const Options = styled.div`
     padding: 1rem;
-    background: var(--beige-60);
+    background: var(--beige-10);
     display: flex;
     align-items: center;
     margin-top: 1.5rem;
@@ -41,7 +41,7 @@ export const Options = styled.div`
     cursor: pointer;
 
     &:hover, :focus{
-        background: var(--beige-10);
+        background: var(--beige-60);
     }
 `
 

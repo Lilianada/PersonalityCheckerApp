@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Opt,
     Options,
     QtnCount,
@@ -25,9 +26,9 @@ export default function QtnAnswer () {
 
     // Handle the Next button once clicked
     const handleClick = (correctAns) => {
-        if (correctAns == "introvert" > 3) {
+        if ((correctAns == "introvert") > 3) {
             setShowResult("Introvert")
-        }else if (correctAns == "extrovert" > 3){
+        }else if ((correctAns == "extrovert") > 3){
             setShowResult("Extrovert")
         }else {
             setShowResult("Ambivert") 
@@ -47,7 +48,7 @@ export default function QtnAnswer () {
             {showResult ? (
                 <Result>
                     <ResultText>You are an {showResult}!</ResultText>
-                    {/* <img src="https://n.foxdsgn.com/sterling-3/wp-content/uploads/2020/12/7-2.png" alt="Result" /> */}
+                    <img src="https://n.foxdsgn.com/sterling-3/wp-content/uploads/2020/12/7-2.png" alt="Result" />
                 </Result>
                 )
                 :
@@ -68,7 +69,9 @@ export default function QtnAnswer () {
                             <ButtonWrap>
                                 <Button
                                     onClick={handleClick}
-                                >Next question</Button>
+                                >
+                                    Next question
+                                </Button>
                             </ButtonWrap>
                         </Wrapper>
                     ))}

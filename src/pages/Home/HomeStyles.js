@@ -31,3 +31,22 @@ export const InnerBody = styled.div`
     display: flex;
     flex-direction: column;
 `
+
+export const Button = styled.button`
+    width: 60%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background: var(--green-color);
+    box-shadow: 0 4px 25px rgb(0 0 0 / 5%);
+    font-size: var(--font-eighteen); 
+    font-family: inherit;
+    color: var(--white-color);
+    margin: 1.5rem auto;
+    cursor: pointer;
+
+    &:hover, :focus{
+        background: var(--darkgreen-color);
+    }
+`
