@@ -26,9 +26,9 @@ export default function QtnAnswer () {
 
     // Hanlde Options
     const handleOptions = (correctAns) => {
-        if ((correctAns === "introvert") > 3) {
+        if (correctAns === "introvert") {
             console.log("Introvert")
-        }
+        }else {console.log("Extrovert")}
     }
 
     // Handle the Next button once clicked
@@ -60,7 +60,7 @@ export default function QtnAnswer () {
                             <Req>All questions are required</Req>
 
                             {questions[currentQtn].Options.map((options, idx) => (
-                                <Options key={idx} onSubmit={()=> handleOptions(options.correctAns)}>
+                                <Options key={idx} onClick={()=> handleOptions(options.correctAns)}>
                                     <Opt>{options.opt}</Opt>
                                     <Ans>{options.ans}</Ans>
                                 </Options>
