@@ -6,13 +6,9 @@ Live code: open [https://personalitychecker.netlify.app/] to view it in your bro
 
 The UI of this application was inspired by [https://teamway.io/]
 
-#
+# Screenshot of landing page
 
-![Landing-Page-Screenshot](https://github.com/lilianada/perosnalitycheckerapp/blob/main/personalitycheckerapp.png?raw=true)
 ![Landing-Page-Screenshot](https://github.com/Lilianada/PersonalityCheckerApp/blob/main/src/assets/personalitycheckerapp.png)
-![stack Overflow](http://lmsotfy.com/so.png)
-
-
 
 # Getting Started with Create React App
 
