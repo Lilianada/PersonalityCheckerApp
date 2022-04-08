@@ -9,7 +9,7 @@ The UI of this application was inspired by [https://teamway.io/]
 #
 
 ![Landing-Page-Screenshot](https://github.com/lilianada/perosnalitycheckerapp/blob/main/personalitycheckerapp.png?raw=true)
-![Landing-Page-Screenshot](assets/personalitycheckerapp.png)
+![Landing-Page-Screenshot](https://github.com/Lilianada/PersonalityCheckerApp/blob/main/src/assets/personalitycheckerapp.png)
 ![stack Overflow](http://lmsotfy.com/so.png)
 
 
