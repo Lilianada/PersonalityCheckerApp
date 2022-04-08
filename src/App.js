@@ -17,8 +17,9 @@ const meta = {
 function App() {
   return (
     <div className="App bodyWrapper">
-      <DocumentMeta {...meta} />
-      <Home/>
+      <DocumentMeta {...meta}>
+        <Home/>
+      </DocumentMeta>
     </div>
   );
 }
