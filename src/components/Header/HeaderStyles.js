@@ -5,6 +5,7 @@ export const Header = styled.header`
     padding: 1rem;
     color: var(--beige-60);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 `

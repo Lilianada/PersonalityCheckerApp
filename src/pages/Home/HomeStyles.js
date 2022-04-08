@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
     background: var(--beige-60);
-    width: 70%;
-    height: fit-;
+    width: 90%;
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -12,9 +12,14 @@ export const Wrapper = styled.section`
     background-color: #f5f3ee;
     background-clip: border-box;
     border-radius: 0.4375rem;
-    padding: 2rem;
+    padding: 1rem;
     margin: 2rem auto;
     box-shadow: 0 4px 25px rgb(0 0 0 / 5%);
+
+    @media screen and (min-width: 768px) {
+        width: 70%;
+        padding: 2rem;
+    }
 `
 
 export const Header = styled.div`
@@ -23,14 +28,19 @@ export const Header = styled.div`
 
 export const InnerBody = styled.div`
     background: var(--beige-110);
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-radius: 0.4375rem;
-    padding: 2rem;
+    padding: 1.5rem;
     margin: 0 auto 2rem;
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+        width: 80%;
+        padding: 2rem;
+    }
 `
 
 export const Button = styled.button`

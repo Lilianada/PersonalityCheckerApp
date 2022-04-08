@@ -59,15 +59,23 @@ export const Options = styled.div`
 `
 
 export const Num = styled.div`
-    padding: .15rem .75rem;
+    padding: 0rem .5rem;
     border-radius: 3px;
     font-weight: 600;
     background: var(--orange-color);
     margin-right: .75rem;
+
+    @media screen and (min-width: 768px) {
+        padding: .15rem .75rem;
+    }
 `
 
 export const Ans = styled.p`
-    font-size: var(--font-eighteen); 
+    font-size: var(--font-fourteen); 
+
+    @media screen and (min-width: 768px) {
+        font-size: var(--font-eighteen); 
+    }
 `
 
 export const ButtonWrap = styled.div`
