@@ -2,7 +2,7 @@
 
 Live code: open [https://personalitychecker.netlify.app/] to view it in your browser
 
-# UI inspiration o
+# UI inspiration 
 
 The UI of this application was inspired by [https://teamway.io/]
 
