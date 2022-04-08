@@ -9,7 +9,8 @@ import { Num,
     Button,
     ButtonWrap,
     Result,
-    ResultText
+    ResultText,
+    Text
 } from './QAstyles.js';
 import questions from "./Questions.js";
 import image from "../../assets/049-choices-colour.svg"
@@ -30,6 +31,9 @@ export default function QtnAnswer () {
     // Handle Options
     const [finalOption, setFinalOption] = useState([]);
     const [currentOption, setCurrentOption] = useState("");
+
+    // Result Text
+    const [resultText, setResultText] = useState('');
 
     const handleOptions = (correctAns) => {
         setCurrentOption(correctAns)
@@ -57,11 +61,16 @@ export default function QtnAnswer () {
                     return arrayItem
                 }
             })
-            // Re
+
+            // Result
             const intro = finalOption.length - extro.length 
                 if (intro > extro.length){
-                    setShowResult('Introvert')
-                }else {setShowResult('Extrovert')}
+                    setShowResult('Introvert');
+                    setResultText("An introvert is a person with qualities of a personality type known as introversion, which means that they feel more comfortable focusing on their inner thoughts and ideas, rather than what's happening externally. They enjoy spending time with just one or two people, rather than large groups or crowds.")
+                }else {
+                    setShowResult('Extrovert');
+                    setResultText("The definition of an extrovert is someone who is very outgoing and engaged with people. An example of an extrovert is someone at a party who chats easily with everyone.")
+                }
         }
     }
 
@@ -70,6 +79,7 @@ export default function QtnAnswer () {
             {showResult ? (
                 <Result>
                     <ResultText>You are an {showResult}!</ResultText>
+                    <Text>{resultText}</Text>
                     <img src={image} alt="Result" style={{width: "18rem", margin: "2rem auto"}} />
                     <Link to="/" style={{display: "grid"}}><Button>Go to home</Button></Link>
                 </Result>

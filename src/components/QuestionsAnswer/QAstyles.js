@@ -15,6 +15,10 @@ export const ResultText = styled.h1`
     /* font-size: var(--font-twentyfour); */
     font-weight: 600;
 `
+export const Text = styled.p`
+    text-align: center;
+    margin: 1rem;
+`
 export const QtnCount = styled.p`
     font-size: var(--font-eighteen);
     font-weight: 600;
@@ -45,7 +49,6 @@ export const Options = styled.div`
     outline: none;
     font-family: var(--fontOne);
     font-size: var(--font--eighteen);
-    transition: ease-in-out .3s;
     cursor: pointer;
 
     &:hover, &:visited{
