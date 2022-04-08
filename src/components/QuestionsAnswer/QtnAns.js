@@ -81,7 +81,9 @@ export default function QtnAnswer () {
                     <ResultText>You are an {showResult}!</ResultText>
                     <Text>{resultText}</Text>
                     <img src={image} alt="Result" style={{width: "18rem", margin: "2rem auto"}} />
-                    <Link to="/" style={{display: "grid"}}><Button>Go to home</Button></Link>
+                    <Link to="/" style={{display: "grid"}}>
+                        <Button>Go to home</Button>
+                    </Link>
                 </Result>
                 )
                 :
@@ -102,6 +104,7 @@ export default function QtnAnswer () {
                             <ButtonWrap>
                                 <Button
                                     onClick={handleClick}
+                                    data-testid="start-button"
                                 >
                                     Next
                                 </Button>

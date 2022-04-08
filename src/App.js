@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App bodyWrapper">
       <DocumentMeta {...meta}>
-        <Home/>
+        <Home />
       </DocumentMeta>
     </div>
   );
