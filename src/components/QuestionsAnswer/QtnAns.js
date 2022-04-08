@@ -16,30 +16,49 @@ import questions from "./Questions.js";
 
 export default function QtnAnswer () {
     // Handles the visibility of the questions
-    const [visible, setVisible] = useState(1)
+    const [visible, setVisible] = useState(1);
 
     //Replaces the current question with the next question
-    const [currentQtn, setCurrentQtn] = useState(0)
+    const [currentQtn, setCurrentQtn] = useState(0);
 
     //Shows the result of the test
-    const [showResult, setShowResult] = useState(false)
+    const [showResult, setShowResult] = useState(undefined);
 
-    // Hanlde Options
+    // Handle Options
+    const [finalOption, setFinalOption] = useState([]);
+    const [currentOption, setCurrentOption] = useState("");
+
     const handleOptions = (correctAns) => {
-        if (correctAns === "introvert") {
-            console.log("Introvert")
-        }else {console.log("Extrovert")}
+        setCurrentOption(correctAns)
     }
 
     // Handle the Next button once clicked
     const handleClick = () => {
+        if (currentOption === ""){
+            alert('Choose an option');
+            return
+        }
         const nxtQuestion = currentQtn + 1;
             setCurrentQtn(nxtQuestion);
+
         if (nxtQuestion < questions.length){
-            setCurrentQtn(nxtQuestion)
-            }else{
-                alert ("You've come to the end of the Test");
-            }
+            setFinalOption(finalOption.concat([currentOption]))
+            setCurrentOption('');
+
+        setCurrentQtn(nxtQuestion)
+        }else{
+            // Returns the option that meets the condition 'extrovert after filtering
+            const extro = finalOption.filter( (arrayItem) => { 
+                if (arrayItem === 'extrovert'){
+                    return arrayItem
+                }
+            })
+            // Re
+            const intro = finalOption.length - extro.length 
+                if (intro > extro.length){
+                    setShowResult('Introvert')
+                }else {setShowResult('Extrovert')}
+        }
     }
 
     return (
@@ -55,7 +74,7 @@ export default function QtnAnswer () {
                 <>
                     {questions.slice(0, visible).map((test, idx) => (
                         <Wrapper key={idx}>
-                            <QtnCount>Question {test.id}/{questions.length}</QtnCount>
+                            <QtnCount>Question {currentQtn+1}/{questions.length}</QtnCount>
                             <Qtn>{questions[currentQtn].qtnText}</Qtn>
                             <Req>All questions are required</Req>
 
@@ -69,7 +88,7 @@ export default function QtnAnswer () {
                                 <Button
                                     onClick={handleClick}
                                 >
-                                    Next question
+                                    Next
                                 </Button>
                             </ButtonWrap>
                         </Wrapper>

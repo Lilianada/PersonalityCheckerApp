@@ -14,7 +14,7 @@ function Home() {
             <Wrapper>
                 <Routes>
                     <Route exact path="/" element={<HomeBody/>}/>
-                    <Route path="/QtnAnswer" element={<QtnAnswer/>}/>
+                    <Route path="/Test" element={<QtnAnswer/>}/>
                 </Routes>
             </Wrapper>
             <FooterSection />

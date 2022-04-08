@@ -21,7 +21,7 @@ export default function HomeBody () {
                     you should too. Click the button to start now.
                     Lorem ipsum Lorem loremmmmmm shhbc ncbabhc anac.
                 </p>
-                <Link to="/QtnAnswer" style={{display: "grid"}}><Button>Start test</Button></Link>
+                <Link to="/Test" style={{display: "grid"}}><Button>Start test</Button></Link>
             </InnerBody>
             
         </>

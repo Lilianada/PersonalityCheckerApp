@@ -47,13 +47,17 @@ export const Options = styled.form`
     font-size: var(--font--eighteen);
     cursor: pointer;
 
-    &:hover, :focus{
+    &:hover{
         background: var(--beige-60);
+    }
+
+    &:visited, :focus{
+        background: var(--green-color);
     }
 `
 
 export const Opt = styled.div`
-    padding: .5rem .75rem;
+    padding: .15rem .75rem;
     border-radius: 3px;
     font-weight: 600;
     background: var(--orange-color);
