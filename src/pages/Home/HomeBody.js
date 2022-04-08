@@ -11,17 +11,19 @@ export default function HomeBody () {
     return (
         <>
             <Header>
-                <h2>Wanna find out if you're an Extrovert or an Introvert?</h2>
-                <h4>Take the Personality Test</h4>
+                <h2>Take our Personality Test and get a “freakishly accurate” description of who you are and why you do things the way you do.</h2>
+                
             </Header>
             <img src={image} alt="Choice image" className="image"/>
             <InnerBody>
                 <p>
-                    A lot of young adults want to find out their Personality, 
-                    you should too. Click the button to start now.
-                    Lorem ipsum Lorem loremmmmmm shhbc ncbabhc anac.
+                    Take this free Personality Test and find out more about who you are and your strengths. 
+                    Be yourself and answer honestly to find out your personality type.
+                    Your personality type influences many areas of your life, this is valuable information for choosing a career. 
+                    and you can grow into the person you want to be with your optional Premium Profile.
                 </p>
                 <Link to="/Test" style={{display: "grid"}}><Button>Start test</Button></Link>
+                <h4>Only takes 2 minutes</h4>
             </InnerBody>
             
         </>

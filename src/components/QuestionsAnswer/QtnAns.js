@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Opt,
+import { Num,
     Options,
     QtnCount,
     Qtn,
@@ -12,6 +12,10 @@ import { Opt,
     ResultText
 } from './QAstyles.js';
 import questions from "./Questions.js";
+import image from "../../assets/049-choices-colour.svg"
+import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function QtnAnswer () {
     // Handles the visibility of the questions
@@ -32,9 +36,10 @@ export default function QtnAnswer () {
     }
 
     // Handle the Next button once clicked
+    
     const handleClick = () => {
         if (currentOption === ""){
-            alert('Choose an option');
+            toast("Please kindly choose an option to proceed!");
             return
         }
         const nxtQuestion = currentQtn + 1;
@@ -65,7 +70,8 @@ export default function QtnAnswer () {
             {showResult ? (
                 <Result>
                     <ResultText>You are an {showResult}!</ResultText>
-                    <img src="https://n.foxdsgn.com/sterling-3/wp-content/uploads/2020/12/7-2.png" alt="Result" />
+                    <img src={image} alt="Result" style={{width: "18rem", margin: "2rem auto"}} />
+                    <Link to="/" style={{display: "grid"}}><Button>Go to home</Button></Link>
                 </Result>
                 )
                 :
@@ -79,7 +85,7 @@ export default function QtnAnswer () {
 
                             {questions[currentQtn].Options.map((options, idx) => (
                                 <Options key={idx} onClick={()=> handleOptions(options.correctAns)}>
-                                    <Opt>{options.opt}</Opt>
+                                    <Num id="num">{options.opt}</Num>
                                     <Ans>{options.ans}</Ans>
                                 </Options>
                             ))}
@@ -94,6 +100,7 @@ export default function QtnAnswer () {
                     ))}
                 </> 
             )}
+             <ToastContainer />
         </>
     )
 }

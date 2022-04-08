@@ -33,7 +33,7 @@ export const Req = styled.p`
     color: var(--green-color);
 `
 
-export const Options = styled.form`
+export const Options = styled.div`
     width: 100%;
     padding: 1rem;
     background: var(--beige-10);
@@ -45,18 +45,20 @@ export const Options = styled.form`
     outline: none;
     font-family: var(--fontOne);
     font-size: var(--font--eighteen);
+    transition: ease-in-out .3s;
     cursor: pointer;
 
-    &:hover{
-        background: var(--beige-60);
+    &:hover, &:visited{
+        border: 1px solid var(--green-color);
     }
 
-    &:visited, :focus{
+    &:hover #num{
         background: var(--green-color);
+        color: var(--beige-10);
     }
 `
 
-export const Opt = styled.div`
+export const Num = styled.div`
     padding: .15rem .75rem;
     border-radius: 3px;
     font-weight: 600;

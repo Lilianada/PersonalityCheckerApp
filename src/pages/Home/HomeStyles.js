@@ -30,6 +30,7 @@ export const InnerBody = styled.div`
     margin: 0 auto 2rem;
     display: flex;
     flex-direction: column;
+    text-align: center;
 `
 
 export const Button = styled.button`
