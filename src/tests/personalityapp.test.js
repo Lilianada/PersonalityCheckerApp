@@ -1,9 +1,8 @@
 import React from 'react';
-import { fireEvent, getByTestId, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import QtnAnswer from '../components/QuestionsAnswer/QtnAns';
 import { renderWithRouter, JestfindText } from "./utils/base"
 import HomeBody from '../pages/Home/HomeBody';
-import { Options, Result } from '../components/QuestionsAnswer/QAstyles';
 
 
 
