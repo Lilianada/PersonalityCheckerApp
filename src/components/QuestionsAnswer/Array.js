@@ -133,6 +133,141 @@ export default
                     correctAns: "introvert"
                 }
             ]
+        },
+
+        {
+            id: 6,
+            qtnText: "You’re out with a group of friends and there’s a person who’s quite shy and doesn’t talk much. You:",
+            Options: [
+                {
+                    opt: 'A',
+                    ans: "Notice that they’re alone, but don’t go over to talk with them",
+                    correctAns: "introvert"
+                },
+                {
+                    opt: 'B',
+                    ans: "Go and have a chat with them",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'C',
+                    ans: "Shoot some friendly smiles in their direction",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'D',
+                    ans: "Hardly notice them at all",
+                    correctAns: "introvert"
+                }
+            ]
+        },
+
+        {
+            id: 7,
+            qtnText: "You’re out with a group of friends and there’s a person who’s quite shy and doesn’t talk much. You:",
+            Options: [
+                {
+                    opt: 'A',
+                    ans: "Notice that they’re alone, but don’t go over to talk with them",
+                    correctAns: "introvert"
+                },
+                {
+                    opt: 'B',
+                    ans: "Go and have a chat with them",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'C',
+                    ans: "Shoot some friendly smiles in their direction",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'D',
+                    ans: "Hardly notice them at all",
+                    correctAns: "introvert"
+                }
+            ]
+        },
+
+        {
+            id: 8,
+            qtnText: "You’re out with a group of friends and there’s a person who’s quite shy and doesn’t talk much. You:",
+            Options: [
+                {
+                    opt: 'A',
+                    ans: "Notice that they’re alone, but don’t go over to talk with them",
+                    correctAns: "introvert"
+                },
+                {
+                    opt: 'B',
+                    ans: "Go and have a chat with them",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'C',
+                    ans: "Shoot some friendly smiles in their direction",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'D',
+                    ans: "Hardly notice them at all",
+                    correctAns: "introvert"
+                }
+            ]
+        },
+
+        {
+            id: 9,
+            qtnText: "You’re out with a group of friends and there’s a person who’s quite shy and doesn’t talk much. You:",
+            Options: [
+                {
+                    opt: 'A',
+                    ans: "Notice that they’re alone, but don’t go over to talk with them",
+                    correctAns: "introvert"
+                },
+                {
+                    opt: 'B',
+                    ans: "Go and have a chat with them",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'C',
+                    ans: "Shoot some friendly smiles in their direction",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'D',
+                    ans: "Hardly notice them at all",
+                    correctAns: "introvert"
+                }
+            ]
+        },
+
+        {
+            id: 10,
+            qtnText: "You’re out with a group of friends and there’s a person who’s quite shy and doesn’t talk much. You:",
+            Options: [
+                {
+                    opt: 'A',
+                    ans: "Notice that they’re alone, but don’t go over to talk with them",
+                    correctAns: "introvert"
+                },
+                {
+                    opt: 'B',
+                    ans: "Go and have a chat with them",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'C',
+                    ans: "Shoot some friendly smiles in their direction",
+                    correctAns: "extrovert"
+                },
+                {
+                    opt: 'D',
+                    ans: "Hardly notice them at all",
+                    correctAns: "introvert"
+                }
+            ]
         }
 
 

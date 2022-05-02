@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from 'react-router-dom';
 import FooterSection from '../../components/Footer/Footer';
 import HeaderNav from '../../components/Header/Header';
-import QtnAnswer from "../../components/QuestionsAnswer/QtnAns";
+import QtnAnswer from "../../components/QuestionsAnswer/Main";
 import { Wrapper} from "../../pages/Home/HomeStyles";
 import HomeBody from "./HomeBody";
 

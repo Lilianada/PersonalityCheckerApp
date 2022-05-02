@@ -11,8 +11,8 @@ import { Num,
     Result,
     ResultText,
     Text
-} from './QAstyles.js';
-import questions from "./Questions.js";
+} from './Styles.js';
+import questions from "./Array.js";
 import image from "../../assets/049-choices-colour.svg"
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
@@ -46,25 +46,26 @@ export default function QtnAnswer () {
             toast("Please kindly choose an option to proceed!");
             return
         }
-        const nxtQuestion = currentQtn + 1;
-            setCurrentQtn(nxtQuestion);
+        
+        const nextQuestion = currentQtn + 1;
+            setCurrentQtn(nextQuestion);
 
-        if (nxtQuestion < questions.length){
+        if (nextQuestion < questions.length){
             setFinalOption(finalOption.concat([currentOption]))
             setCurrentOption('');
 
-        setCurrentQtn(nxtQuestion)
+        setCurrentQtn(nextQuestion)
         }else{
             // Returns the option that meets the condition 'extrovert after filtering
-            const extro = finalOption.filter( (arrayItem) => { 
+            const extrovert = finalOption.filter( (arrayItem) => { 
                 if (arrayItem === 'extrovert'){
                     return arrayItem
                 }
             })
 
             // Result
-            const intro = finalOption.length - extro.length 
-                if (intro > extro.length){
+            const introvert = finalOption.length - extrovert.length 
+                if (introvert > extrovert.length){
                     setShowResult('Introvert');
                     setResultText("An introvert is a person with qualities of a personality type known as introversion, which means that they feel more comfortable focusing on their inner thoughts and ideas, rather than what's happening externally. They enjoy spending time with just one or two people, rather than large groups or crowds.")
                 }else {
@@ -113,7 +114,7 @@ export default function QtnAnswer () {
                     ))}
                 </> 
             )}
-             <ToastContainer />
+            <ToastContainer />
         </>
     )
 }
