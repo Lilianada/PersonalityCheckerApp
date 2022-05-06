@@ -14,7 +14,7 @@ export default function HomeBody () {
                 <h2>Take our Personality Test and get a “freakishly accurate” description of who you are and why you do things the way you do.</h2>
                 
             </Header>
-            <img src={image} alt="Choice image" className="image"/>
+            <img src={image} alt="Choice image" className="choice"/>
             <InnerBody>
                 <p>
                     Take this free Personality Test and find out more about who you are and your strengths. 
