@@ -7,7 +7,7 @@ import {CgGirl} from "react-icons/cg"
 export default function HeaderNav () {
     return (
         <Header>
-            <h2 className="logo">PersonalityChecker</h2>
+            <HeaderName>PersonalityChecker</HeaderName>
             <div className="Profile">
                 <HeaderName><CgGirl style={{marginRight: ".5rem"}}/>By Lilian Okeke</HeaderName>
             </div>

@@ -13,4 +13,5 @@ export const Header = styled.header`
 export const HeaderName = styled.h3`
     display: flex;
     align-items: flex-start;
+    color: var(--beige-10);
 `
