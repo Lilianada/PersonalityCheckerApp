@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
     background: var(--beige-60);
-    width: 90%;
+    width: 80%;
     height: auto;
     position: relative;
     display: flex;
@@ -17,35 +17,30 @@ export const Wrapper = styled.section`
     box-shadow: 0 4px 25px rgb(0 0 0 / 5%);
 
     @media screen and (min-width: 768px) {
-        width: 70%;
-        padding: 2rem;
+        width: 600px;
+        padding: 1.5rem;
     }
 `
 
-export const Header = styled.div`
-    text-align: center;
-`
-
 export const InnerBody = styled.div`
-    background: var(--beige-110);
+    background: var(--beige-60);
     width: 100%;
     height: 100%;
     border-radius: 0.4375rem;
     padding: 1.5rem;
-    margin: 0 auto 2rem;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     text-align: center;
 
     @media screen and (min-width: 768px) {
-        width: 80%;
-        padding: 2rem;
+        width: 60%;
+        padding: 1rem;
     }
 `
 
 export const Button = styled.button`
     width: 60%;
-    padding: .5rem;
     border: none;
     outline: none;
     border-radius: 3px;

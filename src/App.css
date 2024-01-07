@@ -29,6 +29,7 @@
     /* Font Sizes */
     --font-thirtyTwo: 1.35rem;
     --font-twentyFour: 1.25rem;
+    --font-twenty: 20px;
     --font-eighteen: 1.125rem;
     --font-sixteen: .8725rem;
     --font-fourteen: .88rem;
@@ -39,6 +40,7 @@
     :root {
         --font-thirtyTwo: 2rem;
         --font-twentyFour: 1.75rem;
+        --font-twenty: 20px;
         --font-eighteen: 1.25rem;
         --font-sixteen: 1rem;
         --font-fourteen: .88rem;
@@ -88,7 +90,7 @@ h4, h5, h6 {
 
 p {
     font-size: var(--font-sixteen);
-    line-height: 1.5rem;
+    line-height: 1rem;
     color: var(--text-pri-color);
 }
 
@@ -101,7 +103,7 @@ h1 {
 }
 
 h2 {
-    font-size: var(--font-twentyFour);
+    font-size: var(--font-twenty);
     line-height: 2rem;
     font-weight: 700;
 }

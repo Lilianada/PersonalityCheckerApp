@@ -39,21 +39,18 @@ export const Req = styled.p`
 
 export const Options = styled.div`
     width: 100%;
-    padding: 1rem;
+    padding: .75rem;
     background: var(--beige-10);
     display: flex;
     align-items: center;
-    margin-top: 1.5rem;
+    margin-top: .75rem;
     box-shadow: 0 4px 25px rgb(0 0 0 / 5%);
     border: none;
     outline: none;
     font-family: var(--fontOne);
     font-size: var(--font--eighteen);
     cursor: pointer;
-
-    &:hover, &:visited{
-        border: 1px solid var(--green-color);
-    }
+    transition: ease-in-out .5s;
 
     &:hover #num{
         background: var(--green-color);
@@ -67,18 +64,11 @@ export const Num = styled.div`
     font-weight: 600;
     background: var(--orange-color);
     margin-right: .75rem;
-
-    @media screen and (min-width: 768px) {
-        padding: .15rem .75rem;
-    }
+    font-size: var(--font-fourteen); 
 `
 
 export const Ans = styled.p`
     font-size: var(--font-fourteen); 
-
-    @media screen and (min-width: 768px) {
-        font-size: var(--font-eighteen); 
-    }
 `
 
 export const ButtonWrap = styled.div`
