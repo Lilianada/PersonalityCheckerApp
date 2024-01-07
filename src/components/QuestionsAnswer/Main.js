@@ -18,103 +18,94 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function QtnAnswer () {
-    // Handles the visibility of the questions
-    const [visible, setVisible] = useState(1);
+export default function QtnAnswer() {
+  const [visible, setVisible] = useState(1);
+  const [currentQtn, setCurrentQtn] = useState(0);
+  const [showResult, setShowResult] = useState(undefined);
+  const [finalOption, setFinalOption] = useState([]);
+  const [currentOption, setCurrentOption] = useState('');
+  const [resultText, setResultText] = useState('');
 
-    //Replaces the current question with the next question
-    const [currentQtn, setCurrentQtn] = useState(0);
+  // Keep track of the active option for each question
+  const [activeOptions, setActiveOptions] = useState(Array(questions.length).fill(null));
 
-    //Shows the result of the test
-    const [showResult, setShowResult] = useState(undefined);
+  const handleOptions = (correctAns, idx) => {
+    setCurrentOption(correctAns);
+    const updatedActiveOptions = [...activeOptions];
+    updatedActiveOptions[currentQtn] = idx;
+    setActiveOptions(updatedActiveOptions);
+  };
 
-    // Handle Options
-    const [finalOption, setFinalOption] = useState([]);
-    const [currentOption, setCurrentOption] = useState("");
-
-    // Result Text
-    const [resultText, setResultText] = useState('');
-
-    const handleOptions = (correctAns) => {
-        setCurrentOption(correctAns)
+  const handleClick = () => {
+    if (currentOption === '') {
+      toast('Please kindly choose an option to proceed!');
+      return;
     }
 
-    // Handle the Next button once clicked
-    
-    const handleClick = () => {
-        if (currentOption === ""){
-            toast("Please kindly choose an option to proceed!");
-            return
-        }
-        
-        const nextQuestion = currentQtn + 1;
-            setCurrentQtn(nextQuestion);
+    const nextQuestion = currentQtn + 1;
+    setCurrentQtn(nextQuestion);
 
-        if (nextQuestion < questions.length){
-            setFinalOption(finalOption.concat([currentOption]))
-            setCurrentOption('');
+    if (nextQuestion < questions.length) {
+      setFinalOption(finalOption.concat([currentOption]));
+      setCurrentOption('');
+      setCurrentQtn(nextQuestion);
+    } else {
+      const extrovert = finalOption.filter((arrayItem) => arrayItem === 'extrovert');
 
-        setCurrentQtn(nextQuestion)
-        }else{
-            // Returns the option that meets the condition 'extrovert after filtering
-            const extrovert = finalOption.filter( (arrayItem) => { 
-                if (arrayItem === 'extrovert'){
-                    return arrayItem
-                }
-            })
-
-            // Result
-            const introvert = finalOption.length - extrovert.length 
-                if (introvert > extrovert.length){
-                    setShowResult('Introvert');
-                    setResultText("An introvert is a person with qualities of a personality type known as introversion, which means that they feel more comfortable focusing on their inner thoughts and ideas, rather than what's happening externally. They enjoy spending time with just one or two people, rather than large groups or crowds.")
-                }else {
-                    setShowResult('Extrovert');
-                    setResultText("The definition of an extrovert is someone who is very outgoing and engaged with people. An example of an extrovert is someone at a party who chats easily with everyone.")
-                }
-        }
+      const introvert = finalOption.length - extrovert.length;
+      if (introvert > extrovert.length) {
+        setShowResult('Introvert');
+        setResultText(
+          "An introvert is a person with qualities of a personality type known as introversion, which means that they feel more comfortable focusing on their inner thoughts and ideas, rather than what's happening externally. They enjoy spending time with just one or two people, rather than large groups or crowds."
+        );
+      } else {
+        setShowResult('Extrovert');
+        setResultText(
+          "The definition of an extrovert is someone who is very outgoing and engaged with people. An example of an extrovert is someone at a party who chats easily with everyone."
+        );
+      }
     }
+  };
 
-    return (
+  return (
+    <>
+      {showResult ? (
+        <Result>
+          <ResultText>You are an {showResult}!</ResultText>
+          <Text>{resultText}</Text>
+          <img src={image} alt="Result" style={{ width: '18rem', margin: '2rem auto' }} />
+          <Link to="/" style={{ display: 'grid' }}>
+            <Button>Go to home</Button>
+          </Link>
+        </Result>
+      ) : (
         <>
-            {showResult ? (
-                <Result>
-                    <ResultText>You are an {showResult}!</ResultText>
-                    <Text>{resultText}</Text>
-                    <img src={image} alt="Result" style={{width: "18rem", margin: "2rem auto"}} />
-                    <Link to="/" style={{display: "grid"}}>
-                        <Button>Go to home</Button>
-                    </Link>
-                </Result>
-                )
-                :
-                (
-                <>
-                    {questions.slice(0, visible).map((test, idx) => (
-                        <Wrapper key={idx}>
-                            <QtnCount>Question {currentQtn+1}/{questions.length}</QtnCount>
-                            <Qtn>{questions[currentQtn].qtnText}</Qtn>
-                            <Req>All questions are required</Req>
+          {questions.slice(0, visible).map((test, idx) => (
+            <Wrapper key={idx}>
+              <QtnCount>Question {currentQtn + 1}/{questions.length}</QtnCount>
+              <Qtn>{questions[currentQtn].qtnText}</Qtn>
+              <Req>All questions are required</Req>
 
-                            {questions[currentQtn].Options.map((options, idx) => (
-                                <Options key={idx} onClick={()=> handleOptions(options.correctAns)}>
-                                    <Num id="num">{options.opt}</Num>
-                                    <Ans>{options.ans}</Ans>
-                                </Options>
-                            ))}
-                            <ButtonWrap>
-                                <Button
-                                    onClick={handleClick}
-                                    data-testid="start-button"
-                                >
-                                    Next
-                                </Button>
-                            </ButtonWrap>
-                        </Wrapper>
-                    ))}
-                </> 
-            )}
-            <ToastContainer />
+              {questions[currentQtn].Options.map((options, idx) => (
+                <Options
+                  key={idx}
+                  onClick={() => handleOptions(options.correctAns, idx)}
+                  isActive={idx === activeOptions[currentQtn]}
+                >
+                  <Num id="num">{options.opt}</Num>
+                  <Ans id="ans">{options.ans}</Ans>
+                </Options>
+              ))}
+              <ButtonWrap>
+                <Button onClick={handleClick} data-testid="start-button">
+                  Next
+                </Button>
+              </ButtonWrap>
+            </Wrapper>
+          ))}
         </>
-    )
+      )}
+      <ToastContainer />
+    </>
+  );
 }

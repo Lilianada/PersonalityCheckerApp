@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.section`
     
@@ -50,11 +50,25 @@ export const Options = styled.div`
     font-family: var(--fontOne);
     font-size: var(--font--eighteen);
     cursor: pointer;
-    transition: ease-in-out .5s;
+    transition: ease-in-out .35s;
 
-    &:hover #num{
-        background: var(--green-color);
-        color: var(--beige-10);
+    ${(props) =>
+        props.isActive &&
+        css`
+          background: var(--green-color);
+        
+
+          #num {
+            background: var(--orange-color);
+          }
+    
+          #ans {
+            color: var(--beige-10);
+          }
+        `};    
+
+    &:hover {
+        border: 1px solid var(--green-color);
     }
 `
 
